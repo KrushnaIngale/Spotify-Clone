@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" href="./assets/logo.png">
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="spotify.css">
+    <link rel="stylesheet" href="css/spotify.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -40,6 +41,10 @@
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>
+                <div class="song-list">
+                    <ul>
+                    </ul>
+                </div>
                 <div class="lib-box">
                     <div class="box">
                         <div class="box-p1">
@@ -58,6 +63,15 @@
                             <p>We'll keep you updated on new episodes</p>
                         </div>
                         <button class="badge" href="#">Browse podcasts</button>
+                    </div>
+                    <div class="box">
+                        <div class="box-p1">
+                            <p>Create your first playlist</p>
+                        </div>
+                        <div class="box-p2">
+                            <p>It's easy, we'll help you</p>
+                        </div>
+                        <button class="badge" href="#">Create playlist</button>
                     </div>
                 </div>
             </div>
@@ -78,7 +92,7 @@
 
             <h2>Recently Played</h2>
             <div class="card-container">
-                <div class="card">
+                <div class="card" data-folder="ncs" >
                     <div class="play"><svg width="45" height="45" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12" cy="12" r="11" fill="#1DB954" />
@@ -93,7 +107,7 @@
             </div>
             <h2>Trending near you</h2>
             <div class="card-container">
-                <div class="card">
+                <div class="card" data-folder="cs" >
                     <div class="play"><svg width="45" height="45" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12" cy="12" r="11" fill="#1DB954" />
@@ -159,7 +173,8 @@
                     <img src="./assets/card4img.jpeg" class="card-img">
                     <p class="card-title">Top South Songs</p>
                     <p class="card-body">Enjoy the most replayed south songs</p>
-                </div><div class="card">
+                </div>
+                <div class="card">
                     <div class="play"><svg width="45" height="45" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12" cy="12" r="11" fill="#1DB954" />
@@ -261,7 +276,8 @@
                     <img src="./assets/card1img.jpeg" class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-body">Your daily updates of the most played tracks...</p>
-                </div><div class="card">
+                </div>
+                <div class="card">
                     <div class="play"><svg width="45" height="45" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12" cy="12" r="11" fill="#1DB954" />
@@ -289,44 +305,46 @@
                 </div>
             </div>
         </div>
-        <div class="music-player">
-            <div class="album">
-                <img src="./assets/album_picture.jpeg" class="album-pic">
-                <div class="song">
-                    <p class="song-name">Daylight</p>
-                    <p class="song-artist">David Kushner</p>
-                </div>
-                <div class="options-player">
-                    <img src="./assets/album_icon1.png" class="album-fav-icon">
-                    <img src="./assets/album_icon2.png" class="album-minimize-icon">
-                </div>
+
+    </div>
+    <div class="music-player">
+        <div class="album">
+            <img src="./assets/album_picture.jpeg" class="album-pic">
+            <div class="song">
+                <p class="song-name">Daylight</p>
+                <p class="song-artist">David Kushner</p>
             </div>
-            <div class="player">
-                <div class="player-controls">
-                    <img src="./assets/player_icon1.png" class="player-control-icon">
-                    <img src="./assets/player_icon2.png" class="player-control-icon">
-                    <img src="./assets/player_icon3.png" class="player-control-icon" style="height: 1.9rem; opacity:1">
-                    <img src="./assets/player_icon4.png" class="player-control-icon">
-                    <img src="./assets/player_icon5.png" class="player-control-icon">
-                </div>
-                <div class="playback-bar">
-                    <span class="curr-time">00:00</span>
-                    <input type="range" min="0" max="100" class="progress-bar" step="1">
-                    <span class="total-time">3:37</span>
-                </div>
+            <div class="options-player">
+                <img src="./assets/album_icon1.png" class="album-fav-icon">
+                <img src="./assets/album_icon2.png" class="album-minimize-icon">
             </div>
-            <div class="controls">
-                <img src="./assets/controls_icon1.png" class="play-icon">
-                <img src="./assets/controld_icon2.png" class="lyrics-icon">
-                <img src="./assets/controls_icon3.png" class="queue-icon">
-                <img src="./assets/controls_icon4.png" class="connection-icon">
-                <img src="./assets/controls_icon5.png" class="volume-icon">
-                <input type="range" min="0" max="100" class="volume-bar" step="1">
+        </div>
+        <div class="player">
+            <div class="player-controls">
+                <img src="./assets/player_icon1.png" class="player-control-icon" id="shuffle">
+                <img src="./assets/player_icon2.png" class="player-control-icon" id="previous">
+                <img src="./assets/player_icon3.png" class="player-control-icon" id="play"
+                    style="height: 1.9rem; opacity:1">
+                <img src="./assets/player_icon4.png" class="player-control-icon" id="next">
+                <img src="./assets/player_icon5.png" class="player-control-icon" id="loop">
             </div>
+            <div class="playback-bar">
+                <span class="curr-time">00:00</span>
+                <input type="range" min="0" max="100" class="progress-bar" step="1" value="0">
+                <span class="total-time">3:37</span>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="./assets/controls_icon1.png" class="play-icon">
+            <img src="./assets/controld_icon2.png" class="lyrics-icon">
+            <img src="./assets/controls_icon3.png" class="queue-icon">
+            <img src="./assets/controls_icon4.png" class="connection-icon">
+            <img src="./assets/controls_icon5.png" class="volume-icon">
+            <input type="range" min="0" max="100" class="volume-bar" step="1" name="volume">
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
