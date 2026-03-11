@@ -1,0 +1,25 @@
+[
+  {
+    "folder": "cs",
+    "title": "Copyright Songs",
+    "description": "Cover Songs for you",
+    "tracks": [
+      "Death Bed",
+      "Faded",
+      "Hate Me"
+    ]
+  },
+  {
+    "folder": "ncs",
+    "title": "Sleep Songs",
+    "description": "Songs for you",
+    "tracks": [
+      "Bad Liar",
+      "Death Bed",
+      "Faded",
+      "Hate Me",
+      "Solo",
+      "Without Me"
+    ]
+  }
+]
