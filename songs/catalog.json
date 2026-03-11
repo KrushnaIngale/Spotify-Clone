@@ -21,5 +21,18 @@
       "Solo",
       "Without Me"
     ]
+  },
+  ,
+  {
+    "folder": "Angry_(mood)",
+    "title": "Angry_(mood)",
+    "description": "Anger express for you",
+    "tracks": [
+      "aggressor",
+      "city-justice-fighters",
+      "intense-battle-scene",
+      "must-be-angry"
+    ]
   }
+  
 ]
