@@ -23,7 +23,7 @@ function secToMin(seconds) {
 }
 async function getSongs(folder) {
   currentFolder = folder;
-  let a = await fetch(`http://127.0.0.1:3000/${currentFolder}`);
+  let a = await fetch(`/${currentFolder}`);
 
   let reposnse = await a.text();
   // console.log(reposnse)
